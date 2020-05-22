@@ -1,12 +1,10 @@
 # Node ImersaoIncodde
 
-#2 Execute:
+<h3>Execute:</h3> 
 npm install
 nodemon server.js
 
-Atividade 3 node
-
-# Acesse as url 
+<h3>Acesse as seguintes url's :</h3> 
 
 http://localhost:5000/biblioteca
 http://localhost:5000/google
