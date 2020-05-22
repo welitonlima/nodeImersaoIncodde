@@ -1,4 +1,9 @@
-# nodeImersaoIncodde
+# Node ImersaoIncodde
+
+#2 Execute:
+npm install
+nodemon server.js
+
 Atividade 3 node
 
 # Acesse as url 
