@@ -8,10 +8,15 @@ app.use(express.urlencoded({ extended: true }));
 let users = 
 [
     {
+        nome: "Weliton",
+        email: "welitonpl@gmail.com",
+        senha: "123456"
+    },
+    {
         nome: "Henrique",
         email: "henrique@gmail.com",
         senha: "123456"
-    },
+    }
 ]
 
 app.get('/buscar/:idEmail', (req, res) => {
