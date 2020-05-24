@@ -37,7 +37,7 @@ app.get("/listar", (req, res) =>{
 });
 
 app.post("/cadastrar", (req, res)=>{
-    //res.json(req.body);
+    //res.json(req.body);    
 
     let emailJaCadastrado = users.filter(
         (user) => user.email == req.body.email
@@ -81,6 +81,5 @@ app.delete("/deletar/:idEmail", (req, res)=> {
     
     //console.log(deletar);
 });
-
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
