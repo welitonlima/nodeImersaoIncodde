@@ -54,6 +54,7 @@ app.post("/cadastrar", (req, res)=>{
     }    
 });
 
+
 app.delete("/deletar/:idEmail", (req, res)=> {    
 
     console.log(req.params.idEmail);
