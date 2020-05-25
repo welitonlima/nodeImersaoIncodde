@@ -1,9 +1,12 @@
 const express = require('express');
+const cors = require("cors");
 const app = express();
 const port = 5000;
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 
 let users = 
 [
@@ -38,11 +41,18 @@ app.get('/buscar/:idEmail', (req, res) => {
 });
 
 app.get("/listar", (req, res) =>{
-  res.json(users);  
+  //res.header("Access-Control-Allow-Origin", "*");
+  //res.header("Access-Control-Allow-Headers", "Origin, X-Request-Width, Content-Type, Accept");
+  res.json(users);
 });
 
 app.post("/cadastrar", (req, res)=>{
-    //res.json(req.body);    
+    //res.json(req.body);
+
+    console.log("entrei");
+    
+    //res.header("Access-Control-Allow-Origin", "*");
+    //res.header("Access-Control-Allow-Headers", "Origin, X-Request-Width, Content-Type, Accept");
 
     let emailJaCadastrado = users.filter(
         (user) => user.email == req.body.email
@@ -61,8 +71,7 @@ app.post("/cadastrar", (req, res)=>{
 
 
 app.delete("/deletar/:idEmail", (req, res)=> {    
-
-    console.log(req.params.idEmail);
+    
     let deletar;
 
     let emailJaCadastrado = users.filter(
@@ -80,7 +89,7 @@ app.delete("/deletar/:idEmail", (req, res)=> {
             return res.status(200).send();
         }
         catch (e) {
-            return res.status(400).send({ error: "Erro" + e });            
+            return res.status(400).send({ error: "Erro" + e });
         }       
     } 
     

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud</title>
+
+    <link rel='stylesheet' href='css/style.css' type='text/css' />
+</head>
+<body>
+
+    <header>        
+        <img src="https://incodde.com/logo-incodde.png" alt="logo incodde">
+    </header>
+
+    <main>       
+
+        <div class="boxusuario box">            
+            
+            <form id="usuario">                            
+                <input type="text" name="txtNome" id="txtNome" class="campo" placeholder="Nome do usuário *">                            
+                <input type="text" name="txtEmail" id="txtEmail" class="campo" placeholder="Email *">        
+                <input type="password" name="txtSenha" id="txtSenha" class="campo" placeholder="Senha *">
+                <input type="submit" value="Salvar" class="btn">
+            </form>
+            
+            <table id="gvusuarios" class="table">
+                <thead>
+                    <tr>                        
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+    
+                </tbody>
+            </table>
+
+            <div class="boxDetalhes panel">
+                <div class="panel-heading">
+                    <h2>Detalhes</h2>
+                </div>
+                <div class="panel-body">
+                    <strong>Nome:</strong>  <label id="lblNome"></label> <br/>
+                    <strong>Email:</strong>  <label id="lblEmail"></label>
+                </div>
+            </div>
+            
+
+        </div>        
+
+    </main>
+
+    <footer>
+	    
+	</footer>
+
+    <script src="js/javascript.js"></script>
+</body>
+</html>
