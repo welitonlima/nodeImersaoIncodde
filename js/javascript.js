@@ -4,7 +4,7 @@ const txtNome = document.querySelector("#txtNome");
 const txtEmail = document.querySelector("#txtEmail");
 const txtSenha = document.querySelector("#txtSenha");
 
-const urlApiNode = 'http://localhost:5000/';
+const urlApiNode = 'https://nodeincodde.herokuapp.com/';
 
 button.addEventListener("click", (e) => {
     e.preventDefault();   
